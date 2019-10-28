@@ -1,0 +1,46 @@
+:host {
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+  color: yellow;
+  font-size: 20px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.photos {
+  display: flex;
+}
+
+img {
+  padding: 20px;
+  width: 120px;
+  height: 120px;
+}
+
+.health {
+  background-color: red;
+  height: 10px;
+}
+
+.health div {
+  background-color: green;
+  height: 100%;
+}
+
+.property {
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px;
+  color: black;
+}
+
+.property.active {
+  font-size: 20px;
+  color: white;
+}
+
+.equip {
+  margin-top: 10px;
+  background-color: coral;
+}

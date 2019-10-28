@@ -1,0 +1,20 @@
+<span>{{spaceShip.modelName}}</span>
+<div class="actions">
+  <ng-content></ng-content>
+</div>
+
+<div class="photos">
+  <img [src]="spaceShip.imageUrl"/>
+  <img *ngIf="spaceShip.pilot" [src]="spaceShip.pilot.imageUrl"/>
+</div>
+
+<div class="health" [title]="'Health' + spaceShip.health + '%'">
+  <div [style.width.%]="spaceShip.health"></div>
+</div>
+<div class="equip">
+  <div class="property" [class.active]="isShieldActive">SHIELDS</div>
+  <div class="property" [class.active]="!isShieldActive">WEAPON</div>
+</div>
+
+
+
