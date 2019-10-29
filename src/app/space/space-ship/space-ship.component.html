@@ -4,16 +4,16 @@
 </div>
 
 <div class="photos">
-  <img [src]="spaceShip.imageUrl"/>
-  <img *ngIf="spaceShip.pilot" [src]="spaceShip.pilot.imageUrl"/>
+  <img [src]="spaceShip.imageUrl" alt="ship" appSpaceImage/>
+  <img *ngIf="spaceShip.pilot" [src]="spaceShip.pilot.imageUrl" alt="pilot"/>
 </div>
 
 <div class="health" [title]="'Health' + spaceShip.health + '%'">
   <div [style.width.%]="spaceShip.health"></div>
 </div>
 <div class="equip">
-  <div class="property" [class.active]="isShieldActive">SHIELDS</div>
-  <div class="property" [class.active]="!isShieldActive">WEAPON</div>
+  <div class="property">{{spaceShip.activeShields | tickize}} SHIELDS</div>
+  <div class="property">{{spaceShip.activeShields | tickize}} WEAPON</div>
 </div>
 
 

@@ -5,9 +5,15 @@
           class="select-button" (click)="select(pilot)">
     Zaznacz
   </button>
+  <button class="edit-button" [routerLink]="['pilots', pilot.id]">
+    Edytuj
+  </button>
   <ng-template #deselectButton>
     <button class="deselect-button" (click)="select(null)">
       Odznacz
     </button>
   </ng-template>
 </app-pilot>
+<button class="add-button" [routerLink]="['pilots', 'new']">
+  Dodaj
+</button>
