@@ -1,0 +1,39 @@
+:host {
+  display: grid;
+  margin-top: 300px;
+  padding-left: 10px;
+}
+h1 {
+  width: 440px;
+  color: white;
+  margin-right: 360px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.control-label {
+  display: inline-block;
+  width: 100px;
+}
+
+.control-group {
+  margin: 12px 0;
+}
+
+label {
+  color: yellow;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+button {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}

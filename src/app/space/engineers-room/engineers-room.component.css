@@ -1,0 +1,55 @@
+:host {
+  display: grid;
+  margin-top: 300px;
+  padding-left: 10px;
+}
+
+h1 {
+  width: 440px;
+  color: white;
+  margin-right: 360px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.form {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 460px;
+}
+
+label {
+  color: yellow;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.control-label {
+  display: inline-block;
+  width: 100px;
+}
+
+.control-group {
+  margin: 12px 0;
+}
+
+.error {
+  font-size: 20px;
+  color: red;
+}
+
+button {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+p {
+  text-align: center;
+  color: white;
+  font-size: 20px
+}

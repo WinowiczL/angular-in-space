@@ -1,0 +1,16 @@
+.control-label {
+  display: inline-block;
+  width: 100px;
+}
+
+.control-group {
+  margin: 12px 0;
+}
+
+.error {
+  color: red;
+}
+
+img {
+  max-height: 80px;
+}

@@ -1,0 +1,22 @@
+<h1>{{form.controls.id.value ? 'Edycja pilota' : 'Dodawanie pilota'}}</h1>
+
+<form [formGroup]="form">
+  <div class="control-group">
+    <label class="control-label">Imię:</label>
+    <input type="text" formControlName="firstName">
+  </div>
+
+  <div class="control-group">
+    <label class="control-label">Nazwisko:</label>
+    <input type="text" formControlName="lastName">
+  </div>
+
+  <div class="control-group">
+    <label class="control-label">Avatar URL:</label>
+    <input type="text" formControlName="imageUrl">
+  </div>
+  <img [src]="form.get('imageUrl').value">
+  <button routerLink="/">
+    Anuluj
+  </button>
+</form>

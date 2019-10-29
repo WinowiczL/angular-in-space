@@ -1,0 +1,27 @@
+<h1>Engineers Room</h1>
+<form [formGroup]="orderForm" class="form" (ngSubmit)="getFormValues(orderForm.value)">
+
+  <div class="type">
+   <label class="control-label">Typ:</label>
+   <label *ngFor="let spaceShipType of spaceShipTypes">
+     <input type="radio" formControlName="shipType" [value]="spaceShipType.value"/>
+     {{spaceShipType.label}}
+   </label>
+ </div>
+
+  <div class="count">
+    <label class="control-label">Ilość:</label>
+    <input type="number" formControlName="shipCount">
+    <span *ngIf="orderForm.get('shipCount').hasError('required')" class="error">
+      Podaj wartość
+  </span>
+    <span *ngIf="orderForm.get('shipCount').hasError('min') || orderForm.get('shipCount').hasError('max')" class="error">
+      Podaj liczbę z zakresu 1-5!
+  </span>
+  </div>
+
+  <button type="submit" [disabled]="orderForm.invalid || isProducing">
+    Zamów
+  </button>
+  <p *ngIf="isProducing">Produkuję...</p>
+</form>
