@@ -22,4 +22,14 @@ export class PilotService {
     return this.http.get<PilotAttrs>(`${environment.apiUrl}/pilots/${id}`)
       .pipe(map(pilotAttrs => new Pilot(pilotAttrs)));
   }
+
+  savePilot(pilotAttrs: PilotAttrs) {
+    if (pilotAttrs.id) {
+      return this.http.put<PilotAttrs>(`${environment.apiUrl}/pilots/${pilotAttrs.id}`, pilotAttrs)
+        .pipe(map(pilot => new Pilot(pilot)));
+    } else {
+      return this.http.post<PilotAttrs>(`${environment.apiUrl}/pilots`, pilotAttrs)
+        .pipe(map(pilot => new Pilot(pilot)));
+    }
+  }
 }

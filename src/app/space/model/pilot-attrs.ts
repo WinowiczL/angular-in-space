@@ -3,4 +3,5 @@ export interface PilotAttrs {
   firstName: string;
   lastName: string;
   imageUrl: string;
+  fullName?: string;
 }

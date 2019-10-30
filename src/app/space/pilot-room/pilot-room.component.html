@@ -1,4 +1,8 @@
-<h1>Pilot Room</h1>
+<h1>Pilot Room
+  <button class="add-button" [routerLink]="['pilots', 'new']">
+    Dodaj
+  </button>
+</h1>
 <app-pilot *ngFor="let pilot of pilots" [pilot]="pilot"
            [class.selected]="selectedPilot === pilot">
   <button *ngIf="selectedPilot !== pilot; else deselectButton"
@@ -14,6 +18,4 @@
     </button>
   </ng-template>
 </app-pilot>
-<button class="add-button" [routerLink]="['pilots', 'new']">
-  Dodaj
-</button>
+

@@ -18,5 +18,16 @@
       "lastName": "Rambo",
       "imageUrl": "/assets/captain3.png"
     }
+  ],
+  "forbidden-names": [
+    {
+      "name": "Maruda"
+    },
+    {
+      "name": "Ciamajda"
+    },
+    {
+      "name": "Gapcio"
+    }
   ]
 }

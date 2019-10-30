@@ -8,21 +8,17 @@ export class Pilot {
   firstName: string;
   lastName: string;
   imageUrl: string;
+  fullName: string;
 
   constructor(attrs: Partial<PilotAttrs> = {}) {
     this.id = attrs.id;
     this.firstName = attrs.firstName;
     this.lastName = attrs.lastName;
     this.imageUrl = attrs.imageUrl || Pilot.defaultUrl;
+    this.fullName = this.getFullName();
   }
 
-  get fullName(): string {
+  getFullName(): string {
     return `${this.firstName} ${this.lastName}`;
-  }
-
-  set fullName(value: string) {
-    const values = value.split(' ');
-    this.firstName = values[0];
-    this.lastName = values[1];
   }
 }
